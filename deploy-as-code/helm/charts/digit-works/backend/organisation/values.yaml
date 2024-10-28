@@ -159,10 +159,10 @@ env: |
   {{- if index .Values "egov-location-context-path" }}
   - name: EGOV_LOCATION_CONTEXT_PATH
     value: {{ index .Values "egov-location-context-path" | quote }}
-  - name: EGOV_MDMS_SEARCH_ENDPOINT
-    value: "/mdms-v2/v1/_search"
   {{- end }} 
   {{- if index .Values "egov-location-endpoint" }}
   - name: EGOV_LOCATION_ENDPOINT
     value: {{ index .Values "egov-location-endpoint" | quote }}
   {{- end }}
+  - name: EGOV_MDMS_SEARCH_ENDPOINT
+    value: "/mdms-v2/v1/_search"
